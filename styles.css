@@ -1,0 +1,1151 @@
+
+/* =====================================================
+   AJMALYTICS ORGANIZATION
+   GLOBAL WEBSITE STYLESHEET
+   Version: 1.0
+   ===================================================== */
+
+/* 1. BRAND VARIABLES */
+
+:root {
+    --primary: #152B4A;
+    --secondary: #0879D9;
+    --accent: #F59E0B;
+
+    --background: #EDF2F7;
+    --surface: #F8FAFC;
+    --white: #FFFFFF;
+
+    --text: #243449;
+    --muted: #64748B;
+    --border: #D9E2EC;
+
+    --whatsapp: #25D366;
+
+    --shadow-sm: 0 2px 8px rgba(21, 43, 74, 0.06);
+    --shadow-md: 0 8px 24px rgba(21, 43, 74, 0.09);
+    --shadow-lg: 0 15px 40px rgba(21, 43, 74, 0.12);
+
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+
+    --container: 1160px;
+
+    --transition: all 0.25s ease;
+}
+
+
+/* 2. RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.65;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: min(92%, var(--container));
+    margin-inline: auto;
+}
+
+
+/* 3. TYPOGRAPHY */
+
+h1, h2, h3, h4, h5 {
+    color: var(--primary);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: clamp(2rem, 4.5vw, 3.4rem);
+}
+
+h2 {
+    font-size: clamp(1.65rem, 3vw, 2.35rem);
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.text-blue {
+    color: var(--secondary);
+}
+
+.text-orange {
+    color: var(--accent);
+}
+
+.text-muted {
+    color: var(--muted);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-heading {
+    margin-bottom: 10px;
+}
+
+.section-description {
+    max-width: 680px;
+    color: var(--muted);
+    margin-bottom: 28px;
+}
+
+
+/* 4. GENERAL SECTIONS */
+
+section {
+    padding: 58px 0;
+}
+
+.section-light {
+    background: var(--surface);
+}
+
+.section-white {
+    background: var(--white);
+}
+
+.section-dark {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3 {
+    color: var(--white);
+}
+
+
+/* 5. NAVIGATION BAR */
+
+.site-header {
+    width: 100%;
+    background: rgba(248, 250, 252, 0.97);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: auto;
+    max-width: 190px;
+    height: 54px;
+    object-fit: contain;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--secondary);
+}
+
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: 0;
+    color: var(--primary);
+    font-size: 26px;
+}
+
+
+/* 6. BUTTONS */
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 22px;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 14px;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.btn-accent {
+    background: var(--accent);
+    color: var(--primary);
+}
+
+.btn-accent:hover {
+    background: #E58B00;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border-color: var(--secondary);
+    color: var(--secondary);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+.btn-light {
+    background: var(--white);
+    color: var(--primary);
+}
+
+
+/* 7. HERO SECTION */
+
+.hero {
+    padding: 72px 0;
+    background: var(--background);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.hero-content h1 {
+    margin-bottom: 18px;
+}
+
+.hero-content p {
+    color: var(--muted);
+    max-width: 570px;
+    margin-bottom: 24px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    object-fit: cover;
+}
+
+
+/* 8. GENERAL CARDS */
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    margin-bottom: 9px;
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* 9. REUSABLE GRID */
+
+.grid {
+    display: grid;
+    gap: 22px;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+
+/* 10. BOOTCAMP SECTION */
+
+.bootcamp-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.bootcamp-card .card-body {
+    padding: 16px;
+}
+
+.bootcamp-card h3 {
+    margin-bottom: 8px;
+}
+
+.bootcamp-card .btn {
+    margin-top: 8px;
+}
+
+
+/* 11. ACHIEVEMENTS AND GALLERY */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    background: var(--surface);
+}
+
+.gallery-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+
+/* 12. FORMS AND REGISTRATION */
+
+.form-container {
+    max-width: 720px;
+    margin: auto;
+    padding: 28px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-control {
+    width: 100%;
+    padding: 11px 13px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    outline: none;
+    color: var(--text);
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(8, 121, 217, 0.1);
+}
+
+.form-control::placeholder {
+    color: #94A3B8;
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 14px;
+}
+
+.checkbox-item input {
+    accent-color: var(--secondary);
+    width: 17px;
+    height: 17px;
+}
+
+.form-submit {
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+/* 13. CONTACT SECTION */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    padding: 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+}
+
+.contact-item a {
+    color: var(--secondary);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+
+/* 14. FOOTER */
+
+.site-footer {
+    background: var(--primary);
+    color: #CBD5E1;
+    padding: 42px 0 18px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 35px;
+    padding-bottom: 28px;
+}
+
+.footer-logo img {
+    width: auto;
+    max-width: 175px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.site-footer h3 {
+    color: var(--white);
+    font-size: 16px;
+    margin-bottom: 14px;
+}
+
+.site-footer p {
+    font-size: 14px;
+}
+
+.footer-links {
+    display: grid;
+    gap: 8px;
+}
+
+.footer-links a {
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+.footer-contact a {
+    color: #CBD5E1;
+}
+
+.footer-contact a:hover {
+    color: var(--accent);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 17px;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+/* 15. FLOATING WHATSAPP BUTTON */
+
+.whatsapp-float {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--whatsapp);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 28px;
+    box-shadow: var(--shadow-md);
+    z-index: 1100;
+    transition: var(--transition);
+}
+
+.whatsapp-float:hover {
+    background: #1DA851;
+    color: var(--white);
+    transform: scale(1.08);
+}
+
+.whatsapp-tooltip {
+    position: absolute;
+    right: 68px;
+    background: var(--primary);
+    color: var(--white);
+    padding: 7px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+.whatsapp-float:hover .whatsapp-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* 16. BADGES AND LABELS */
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 30px;
+    background: #DCEEFF;
+    color: var(--secondary);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-orange {
+    background: #FFF0D4;
+    color: #A65D00;
+}
+
+
+/* 17. UTILITY CLASSES */
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gap-sm {
+    gap: 10px;
+}
+
+.gap-md {
+    gap: 20px;
+}
+
+.gap-lg {
+    gap: 30px;
+}
+
+.mt-1 {
+    margin-top: 10px;
+}
+
+.mt-2 {
+    margin-top: 20px;
+}
+
+.mb-1 {
+    margin-bottom: 10px;
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* 18. TABLET RESPONSIVENESS */
+
+@media (max-width: 992px) {
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .hero-grid {
+        gap: 25px;
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* 19. MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 92%;
+    }
+
+    section {
+        padding: 42px 0;
+    }
+
+    .navbar {
+        min-height: 66px;
+    }
+
+    .logo img {
+        height: 45px;
+        max-width: 155px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 66px;
+        left: 0;
+        width: 100%;
+        padding: 18px 4%;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-md);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 11px 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-menu .btn {
+        margin-top: 12px;
+    }
+
+    .hero {
+        padding: 45px 0;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+}
+
+
+/* 20. SMALL MOBILE DEVICES */
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 34px 0;
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .form-container {
+        padding: 19px;
+    }
+
+    .checkbox-group {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .whatsapp-float {
+        width: 52px;
+        height: 52px;
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .whatsapp-tooltip {
+        display: none;
+    }
+}
+
+
+/* 21. ACCESSIBILITY */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+/* ACHIEVEMENT STATISTIC CARDS */
+
+.achievement-grid {
+    margin-top: 40px;
+    gap: 24px;
+}
+
+.achievement-card {
+    border: 1px solid #D9E2EC;
+    border-radius: 14px;
+    background: #FFFFFF;
+    box-shadow: 0 5px 18px rgba(21, 43, 74, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(21, 43, 74, 0.12);
+}
+
+.achievement-card .card-body {
+    padding: 30px 20px;
+}
+
+.achievement-number {
+    font-size: 42px;
+    font-weight: 800;
+    color: #0879D9;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.achievement-card .card-title {
+    font-size: 18px;
+    color: #152B4A;
+    margin-bottom: 10px;
+}
+
+.achievement-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .achievement-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .achievement-number {
+        font-size: 34px;
+    }
+
+    .achievement-card .card-body {
+        padding: 24px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* CERTIFICATE DISPLAY */
+
+.certificate-section {
+    background: var(--background);
+}
+
+.certificate-frame {
+    max-width: 900px;
+    margin: 25px auto 0;
+    padding: 12px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.certificate-frame img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 297 / 210;
+    object-fit: contain;
+}
+
+/* =========================================
+   ACHIEVEMENTS PAGE - REFINED DESIGN
+========================================= */
+
+/* Softer background for the achievements area */
+.achievement-section {
+    background: #F1F4F8;
+    padding: 52px 0;
+}
+
+/* Heading spacing */
+.achievement-section .section-heading {
+    margin-bottom: 10px;
+}
+
+.achievement-section .section-description {
+    margin-bottom: 25px;
+}
+
+/* Achievement grid */
+.achievement-grid {
+    margin-top: 28px;
+    gap: 20px;
+}
+
+/* Softer achievement cards */
+.achievement-card {
+    background: #F8FAFC;
+    border: 1px solid #E1E7EF;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(21, 43, 74, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(21, 43, 74, 0.07);
+}
+
+/* Reduce excessive card spacing */
+.achievement-card .card-body {
+    padding: 24px 18px;
+}
+
+.achievement-number {
+    font-size: clamp(30px, 3vw, 40px);
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.achievement-card .card-title {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 10px;
+    background: #EDF2F7;
+    color: var(--primary);
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.achievement-card p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Subtle card accent */
+.achievement-card:nth-child(odd) {
+    border-bottom: 3px solid var(--secondary);
+}
+
+.achievement-card:nth-child(even) {
+    border-bottom: 3px solid var(--accent);
+}
+
+/* =========================================
+   CERTIFICATE SECTION
+========================================= */
+
+.certificate-section {
+    padding: 45px 0;
+    background: #FFFFFF;
+}
+
+.certificate-section .section-description {
+    margin-bottom: 20px;
+}
+
+/* Certificate should remain a contained showcase */
+.certificate-frame {
+    width: 100%;
+    max-width: 760px;
+    margin: 20px auto 0;
+    padding: 10px;
+    background: #F8FAFC;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+}
+
+.certificate-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 510px;
+    aspect-ratio: 297 / 210;
+    object-fit: contain;
+    margin: auto;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+
+    .achievement-section {
+        padding: 42px 0;
+    }
+
+    .achievement-grid {
+        gap: 15px;
+    }
+
+    .achievement-card .card-body {
+        padding: 20px 14px;
+    }
+
+    .achievement-number {
+        font-size: 32px;
+    }
+
+    .achievement-card .card-title {
+        font-size: 14px;
+        padding: 6px 9px;
+    }
+
+    .certificate-section {
+        padding: 38px 0;
+    }
+
+    .certificate-frame {
+        max-width: 100%;
+        padding: 7px;
+    }
+
+    .certificate-frame img {
+        max-height: none;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .achievement-section {
+        padding: 34px 0;
+    }
+
+    .achievement-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .achievement-card .card-body {
+        padding: 20px 16px;
+    }
+
+    .achievement-number {
+        font-size: 34px;
+    }
+
+    .certificate-section {
+        padding: 32px 0;
+    }
+
+    .certificate-frame {
+        padding: 5px;
+        border-radius: 8px;
+    }
+}
